@@ -1,0 +1,71 @@
+    body {
+        font-family: 'Do Hyeon', sans-serif;
+        background-color: #f9f9f9;
+        margin: 0;
+        padding: 20px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    fieldset {
+        border: 2px solid #c8d6e5;           /* 부드러운 파스텔 블루 계열 */
+        border-radius: 12px;                  /* 좀 더 둥글게 */
+        padding: 20px 30px 30px 30px;
+        background-color: #f0f4f8;            /* 아주 연한 하늘색 */
+        box-shadow: 0 4px 8px rgba(200, 215, 230, 0.3); /* 파스텔톤 은은한 그림자 */
+        max-width: 400px;
+        margin: 30px auto;
+    }
+
+    legend {
+        font-size: 2.4rem;                  /* 약간 두껍게 */
+        color: #ffffff;                      /* 차분하고 선명한 파스텔 네이비 */
+        padding: 0 20px;
+        text-align: center;
+        width: auto;
+        border-radius: 10px;
+        background-color: #d6e4f0;           /* 연한 파스텔 블루 */
+        box-shadow: 0 2px 6px rgba(152, 97, 127, 0.2);
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        margin-bottom: 25px;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 0px;
+    }
+
+    li {
+        background: white;
+        padding: 20px 40px; 
+        margin-bottom: 15px;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        font-size: 1.3rem; 
+        text-align: center;
+
+        opacity: 0;
+        transform: translateY(20px);
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    li:hover {
+        transform: translateY(-8px) !important; /* -3px → -8px로 더 띄움 */
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15)!important; /* 그림자도 더 진하게 */
+    }
+
+    /* 슬라이드 업 키프레임 */
+    @keyframes slideUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* 애니메이션 실행 클래스 */
+    .slide-up {
+        animation: slideUp 0.6s ease forwards;
+    }
