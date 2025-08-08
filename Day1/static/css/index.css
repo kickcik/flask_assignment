@@ -5,28 +5,28 @@
         padding: 20px;
 
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* 자식 요소 세로로 배치 */
+        align-items: center; /* 자식 요소를 플렉스 컨테이너의 교차축으로 정렬 */
     }
 
     fieldset {
-        border: 2px solid #c8d6e5;           /* 부드러운 파스텔 블루 계열 */
-        border-radius: 12px;                  /* 좀 더 둥글게 */
+        border: 2px solid #c8d6e5;
+        border-radius: 12px;
         padding: 20px 30px 30px 30px;
-        background-color: #f0f4f8;            /* 아주 연한 하늘색 */
-        box-shadow: 0 4px 8px rgba(200, 215, 230, 0.3); /* 파스텔톤 은은한 그림자 */
+        background-color: #f0f4f8;
+        box-shadow: 0 4px 8px rgba(200, 215, 230, 0.3);
         max-width: 400px;
         margin: 30px auto;
     }
 
     legend {
-        font-size: 2.4rem;                  /* 약간 두껍게 */
-        color: #ffffff;                      /* 차분하고 선명한 파스텔 네이비 */
+        font-size: 2.4rem;
+        color: #ffffff;
         padding: 0 20px;
         text-align: center;
         width: auto;
         border-radius: 10px;
-        background-color: #d6e4f0;           /* 연한 파스텔 블루 */
+        background-color: #d6e4f0;
         box-shadow: 0 2px 6px rgba(152, 97, 127, 0.2);
         text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
         margin-bottom: 25px;
@@ -44,24 +44,26 @@
         margin-bottom: 15px;
         border-radius: 10px;
         box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        font-size: 1.3rem; 
+        font-size: 1.3rem;
         text-align: center;
 
+        /* 숨기고 내리기 */
         opacity: 0;
         transform: translateY(20px);
-        transition: transform 0.4s ease, box-shadow 0.4s ease;
+
+        transition: transform 0.4s ease, box-shadow 0.4s ease; /* transform, -shadow 변경시 부드럽게 적용*/
     }
 
     li:hover {
-        transform: translateY(-8px) !important; /* -3px → -8px로 더 띄움 */
-        box-shadow: 0 8px 20px rgba(0,0,0,0.15)!important; /* 그림자도 더 진하게 */
+        transform: translateY(-8px) !important; /* 우선순위 조정 */
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15)!important; 
     }
 
     /* 슬라이드 업 키프레임 */
     @keyframes slideUp {
         to {
-            opacity: 1;
-            transform: translateY(0);
+            opacity: 1; /* 보이게 */
+            transform: translateY(0); /* 원래 자리로 복원 */
         }
     }
 
